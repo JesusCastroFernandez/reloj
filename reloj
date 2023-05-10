@@ -1,0 +1,17 @@
+#include <iostream>
+#include <ctime>
+#include <unistd.h>
+
+using namespace std;
+
+int main() {
+    while(true) {
+        time_t now = time(0);
+        char* dt = ctime(&now);
+        cout << "Hora actual: " << dt;
+        sleep(1);
+        system("clear"); // Limpiar la consola para que la hora se actualice en el mismo lugar
+    }
+
+    return 0;
+}
